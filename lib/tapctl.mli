@@ -45,7 +45,7 @@ type context
 val create : unit -> context
 val create_dummy : string -> context
 
-type driver = Vhd | Aio
+type driver = Vhd | Aio | Nbd
 val string_of_driver : driver -> string
 
 val get_devnode_dir : context -> string

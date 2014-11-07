@@ -69,11 +69,12 @@ let get_devnode_dir ctx =
 let get_blktapstem ctx = Printf.sprintf "%s/dev/xen/blktap-2/blktap" ctx.host_local_dir
 let get_tapdevstem ctx = Printf.sprintf "%s/dev/xen/blktap-2/tapdev" ctx.host_local_dir
 
-type driver = | Vhd | Aio
+type driver = | Vhd | Aio | Nbd
 
 let string_of_driver = function
 | Vhd -> "vhd"
 | Aio -> "aio"
+| Nbd -> "nbd"
 
 (* DUMMY MODE FUNCTIONS *)
 
